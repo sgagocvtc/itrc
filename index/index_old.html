@@ -1,0 +1,106 @@
+<?php
+
+// The phone number will be blank until they submit on the form below...
+//
+$pN="";
+
+// Get possible phone number from the form...
+//
+if (isset($_POST['pN'])) {$pN = $_POST['pN'];}
+elseif (isset($_GET['pN'])) {$pN = $_GET['pN'];} 
+
+print '
+<HTML>
+<HEAD>
+<TITLE>TICKET DISPLAY ON YOUR SITE</TITLE>
+</head>
+<body BGCOLOR=#FFFFFF LINK=#0000FF ALINK=#808080 VLINK=#808080 border=0 TOPMARGIN = "0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<center>
+<!-- MODIFY THIS HEADER SECTION -->
+<table width="756" height="77" border=0>
+<tr><td><img src="computer-repair.jpg" width="690" height="225"></td></tr>
+</table>
+<!-- END OF HEADER SECTION -->';
+
+// If no phone number, show the form
+//
+if ($pN == "")
+  {
+  print '
+  <!-- BELOW IS THE ACTUAL "FORM"
+  It assumes this file is called "repairTraxTicket.php"
+  YOURS MIGHT BE DIFFERENT SO POSSIBLY CHANGE THE "action" VALUE...
+  -->
+  <hr>
+  <br><br>
+  <form method="post" action="index.php">
+  <b>Welcome to the CVTC Computer Repair Center repair status page</b>
+  <br><br>
+  <font color=blue>Please enter your phone number below without any spaces or dashes to view the status of your repairs:
+  <br></font>
+  <center>
+  <table width="100%">
+  <tr>
+  <td width="40%" align="right">Phone Number:</td>
+  <td><input type="text" name="pN" value="">&nbsp;&nbsp;(10 numbers, like "##########")</td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+  <td><input type="submit"value="Show My Ticket"></td>
+  </tr>
+  </table>
+  <br><br>
+  
+  </form>
+  </tr></td></table>';
+  }
+ 
+// Else ticket number is NOT blank: show the ticket via a frame that points to RepairTRAX
+else
+  {
+  print '
+<br><br>
+  <iframe src="http://www.repairtrax.com/trax.php?j=cT&pN='.$pN.'"" width="950" height="100%" scrolling="yes" frameborder="0">';
+  }
+print '
+<div id="footer">
+  	<p><font color=red><b>CVTC Computer Repair Center<br/>
+	<p>Location: Eau Claire Business Education Center, Room 157A <br/>
+	<p>Phone: 715-831-7260</b></font><br/>
+    <p>Email: <a href="mailto:crccvtc@gmail.com">crccvtc@gmail.com</a> </p>
+    <p><font color = "#006600">Fall 2017 Hours - Mondays 3pm - 5:50PM, Tuesdays 8AM - 10:50AM, Wednesdays 3PM - 5:50PM, Thursdays 8AM - 10:50AM, Fridays Closed</p></font>
+  </div><!--end footer-->
+</body>
+</HTML>';
+
+exit;
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
