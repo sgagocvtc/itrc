@@ -1,7 +1,51 @@
+h3, h4 {
+  margin-top: 20px;
+}
+
 .fa-check {
   color:darkgreen;
 }
 
 .fa-times {
   color:red;
+}
+
+@keyframes logoanim {
+  0%   {color: black;}
+  20%  {color: #FFA300;}
+  40%  {color: #CF0060;}
+  60%  {color: #FF00FF;}
+  80%  {color: #13A8FE;}
+  100% {color: black;}
+}
+
+pre {
+  color:black;
+}
+
+pre:hover {
+  float: none;
+  animation-name: logoanim;
+  animation-duration: 6s;
+  animation-delay: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 768px) {
+  div#logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  div#logo {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  div#logo {
+    font-size: 12.5px;
+  }
 }
