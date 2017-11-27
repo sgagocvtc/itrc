@@ -5,38 +5,48 @@ header, section, footer, aside, nav, main, article, figure {
   display: block;
 }
 
+/*
+  Add margin to the top of headers.
+*/
 h3, h4 {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*
+ Set FontAwesome checkmarks to green.
+*/
 .fa-check {
-  color:darkgreen;
+  color: darkgreen;
 }
 
+/*
+  Set FontAwesome times ("the X's") to red.
+*/
 .fa-times {
-  color:red;
+  color: red;
 }
 
-@keyframes logoanim {
-  0%   {color: black;}
-  20%  {color: #FFA300;}
-  40%  {color: #CF0060;}
-  60%  {color: #FF00FF;}
-  80%  {color: #13A8FE;}
-  100% {color: black;}
+#education-text {
+  font-size: 4em;
 }
 
-pre {
-  color:black;
-}
-
-pre:hover {
-  float: none;
-  animation-name: logoanim;
-  animation-duration: 6s;
-  animation-delay: 2.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+/*
+  Rainbow curtosy of https://rainbowcoding.com/2011/12/02/how-to-create-rainbow-text-in-html-css-javascript/
+*/
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @media (max-width: 768px) {
