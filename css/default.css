@@ -8,7 +8,7 @@ header, section, footer, aside, nav, main, article, figure {
 /*
   Add margin to the top of headers.
 */
-h3, h4 {
+h3, h4, footer {
   margin-top: 40px;
 }
 
@@ -36,6 +36,10 @@ ul {
 
 #education-text {
   font-size: 4em;
+}
+
+#cvtc-symbol {
+  max-height: 70px;
 }
 
 /*
