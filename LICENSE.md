@@ -1,2 +1,2 @@
 
-Copyright (C) 2017 Steven Gago
+Copyright (C) 2018 Chippewa Valley Technical College.  All rights reserved.
